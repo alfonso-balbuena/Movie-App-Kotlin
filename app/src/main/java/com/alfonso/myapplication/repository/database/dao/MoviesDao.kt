@@ -11,13 +11,13 @@ import com.alfonso.myapplication.repository.database.model.TypeMovie
 interface MoviesDao {
 
     @Insert
-    suspend fun insertAll(vararg upcomingMovies: MovieDB)
+    suspend fun insertAll(vararg movies: MovieDB)
 
     @Query("SELECT * FROM MovieDB where type = :typeMovie ")
     suspend fun getAllMoviesForType(typeMovie: TypeMovie) : List<MovieDB>
 
     @Query("SELECT * FROM MovieDB where id = :id")
-    suspend fun getMovieById(id : Long) : MovieDB
+    suspend fun getMovieById(id : Long) : MovieDB?
 
     @Query("DELETE FROM MovieDB WHERE type = :typeMovie")
     suspend fun cleanType(typeMovie: TypeMovie)

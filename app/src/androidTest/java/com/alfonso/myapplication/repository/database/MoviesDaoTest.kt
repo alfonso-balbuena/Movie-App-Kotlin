@@ -91,4 +91,16 @@ class MoviesDaoTest {
         val resultsPopular = moviesDao.getAllMoviesForType(TypeMovie.UPCOMING)
         Assert.assertEquals(3,resultsPopular.size)
     }
+
+    @Test
+    fun insertNothingAndGetPopularEmptyList() = runBlocking {
+        val result = moviesDao.getAllMoviesForType(TypeMovie.POPULAR)
+        Assert.assertTrue(result.isEmpty())
+    }
+
+    @Test
+    fun idNoExistgetNull() = runBlocking {
+        val result = moviesDao.getMovieById(3)
+        Assert.assertNull(result)
+    }
 }
