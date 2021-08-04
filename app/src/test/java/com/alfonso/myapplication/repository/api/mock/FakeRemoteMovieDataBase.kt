@@ -4,7 +4,7 @@ import com.alfonso.myapplication.repository.api.IRemoteMovieDataBase
 import com.alfonso.myapplication.repository.api.RemoteResponse
 import com.alfonso.myapplication.repository.api.model.MovieApi
 
-class MockRemoteMovieDataBase : IRemoteMovieDataBase {
+class FakeRemoteMovieDataBase : IRemoteMovieDataBase {
 
     var returnError = false
 

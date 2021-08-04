@@ -4,7 +4,7 @@ import com.alfonso.myapplication.repository.database.ILocalMovie
 import com.alfonso.myapplication.repository.database.model.MovieDB
 import com.alfonso.myapplication.repository.database.model.TypeMovie
 
-class MockLocalMovie : ILocalMovie {
+class FakeLocalMovie : ILocalMovie {
 
     private val list = ArrayList<MovieDB>()
     private var cont : Int = 1

@@ -1,7 +1,7 @@
 package com.alfonso.myapplication.repository
 
-import com.alfonso.myapplication.repository.api.mock.MockRemoteMovieDataBase
-import com.alfonso.myapplication.repository.database.mock.MockLocalMovie
+import com.alfonso.myapplication.repository.api.mock.FakeRemoteMovieDataBase
+import com.alfonso.myapplication.repository.database.mock.FakeLocalMovie
 import com.alfonso.myapplication.repository.database.model.TypeMovie
 import com.alfonso.myapplication.repository.imp.RepositoryPopularMovieImp
 import kotlinx.coroutines.runBlocking
@@ -11,13 +11,13 @@ import org.junit.Test
 
 class RepositoriesTest {
     private lateinit var repository : IRepositoryPopularMovie
-    private lateinit var remoteRepository : MockRemoteMovieDataBase
-    private lateinit var localRep : MockLocalMovie
+    private lateinit var remoteRepository : FakeRemoteMovieDataBase
+    private lateinit var localRep : FakeLocalMovie
 
     @Before
     fun setup() {
-        remoteRepository = MockRemoteMovieDataBase()
-        localRep = MockLocalMovie()
+        remoteRepository = FakeRemoteMovieDataBase()
+        localRep = FakeLocalMovie()
         repository = RepositoryPopularMovieImp(remoteRepository,localRep)
     }
 
