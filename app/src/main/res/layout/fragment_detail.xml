@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".showlist.DetailFragment">
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/title"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        tools:text="Test text"
+        android:textSize="19sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/release"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="2021-05-19"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        android:layout_marginTop="@dimen/margin"
+        />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/release"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        tools:text="eng"
+        android:layout_marginTop="@dimen/margin"
+        />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/language"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        tools:text="7.8"
+        android:layout_marginTop="@dimen/margin"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poster"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they've ever encountered: his forsaken brother."
+            />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@ import com.alfonso.myapplication.showlist.presenter.IListViewPresenter
 import com.alfonso.myapplication.showlist.presenter.INowPlayingPresenter
 import kotlinx.coroutines.*
 
-class NowPlayingPresenterImp(private val nowPlayingRepository: IRepositoryNowPlayingMovie,private val viewPresenter: IListViewPresenter,private val dispatcher: CoroutineDispatcher = Dispatchers.IO)
+class NowPlayingPresenterImp(private val nowPlayingRepository: IRepositoryNowPlayingMovie,private val viewPresenter: IListViewPresenter,private val dispatcher: CoroutineDispatcher = Dispatchers.Main)
     : INowPlayingPresenter {
 
     private val generalPresenter = GeneralPresenter(dispatcher,viewPresenter)

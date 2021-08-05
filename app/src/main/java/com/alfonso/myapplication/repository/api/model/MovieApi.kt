@@ -13,7 +13,7 @@ data class MovieApi(val adult: Boolean, val backdrop_path : String? = "", val ge
 
     fun toMovieDB(type : TypeMovie) : MovieDB {
         return MovieDB(0,id,adult,backdrop_path,genre_ids.joinToString(separator = ","),original_language,
-        original_title,overview,popularity,poster_path,release_date,title,video,vote_average,vote_count,type)
+        original_title,overview,popularity,"https://image.tmdb.org/t/p/w500$poster_path",release_date,title,video,vote_average,vote_count,type)
     }
 
 }

@@ -6,7 +6,7 @@ import com.alfonso.myapplication.showlist.presenter.IPopularPresenter
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
-class PopularPresenterImp(private val popularRepository: IRepositoryPopularMovie, viewPresenter: IListViewPresenter, dispatcher: CoroutineDispatcher = Dispatchers.IO) :
+class PopularPresenterImp(private val popularRepository: IRepositoryPopularMovie, viewPresenter: IListViewPresenter, dispatcher: CoroutineDispatcher = Dispatchers.Main) :
     IPopularPresenter{
 
     private val generalPresenter = GeneralPresenter(dispatcher,viewPresenter)

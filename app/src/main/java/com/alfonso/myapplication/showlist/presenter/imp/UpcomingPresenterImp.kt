@@ -6,7 +6,7 @@ import com.alfonso.myapplication.showlist.presenter.IUpcomingPresenter
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
-class UpcomingPresenterImp(private val upcomingRepository: IRepositoryUpcomingMovie, viewPresenter: IListViewPresenter, dispatcher: CoroutineDispatcher = Dispatchers.IO) :
+class UpcomingPresenterImp(private val upcomingRepository: IRepositoryUpcomingMovie, viewPresenter: IListViewPresenter, dispatcher: CoroutineDispatcher = Dispatchers.Main) :
     IUpcomingPresenter{
 
     private val generalPresenter = GeneralPresenter(dispatcher,viewPresenter)
